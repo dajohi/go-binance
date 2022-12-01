@@ -1,7 +1,9 @@
 package binance
 
 import (
+	"context"
 	"fmt"
+	"net"
 	"strings"
 	"time"
 
@@ -17,6 +19,8 @@ const (
 )
 
 var (
+	WSDialer func(ctx context.Context, network, addr string) (net.Conn, error)
+
 	// WebsocketTimeout is an interval for sending ping/pong messages if WebsocketKeepalive is enabled
 	WebsocketTimeout = time.Second * 60
 	// WebsocketKeepalive enables sending ping/pong messages to check the connection stability

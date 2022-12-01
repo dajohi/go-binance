@@ -549,19 +549,19 @@ func (s *marginOrderServiceTestSuite) TestCreateOCO() {
 		MarginBuyBorrowAsset:  "BTC",
 		IsIsolated:            true,
 		Orders: []*MarginOCOOrder{
-			&MarginOCOOrder{
+			{
 				Symbol:        "LTCBTC",
 				OrderID:       2,
 				ClientOrderID: "pO9ufTiFGg3nw2fOdgeOXa",
 			},
-			&MarginOCOOrder{
+			{
 				Symbol:        "LTCBTC",
 				OrderID:       3,
 				ClientOrderID: "TXOvglzXuaubXAaENpaRCB",
 			},
 		},
 		OrderReports: []*MarginOCOOrderReport{
-			&MarginOCOOrderReport{
+			{
 				Symbol:                   "LTCBTC",
 				OrderID:                  2,
 				OrderListID:              0,
@@ -576,7 +576,7 @@ func (s *marginOrderServiceTestSuite) TestCreateOCO() {
 				Side:                     SideTypeSell,
 				StopPrice:                "1.00000000",
 			},
-			&MarginOCOOrderReport{
+			{
 				Symbol:                   "LTCBTC",
 				OrderID:                  3,
 				OrderListID:              0,
